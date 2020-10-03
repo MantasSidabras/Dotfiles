@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+FILE="$HOME/.cache/corona.log"
+TODAY="$(date -u +%Y-%m-%d)"
+DATA="$($HOME/.Scripts/corona)"
+HEADER="date "$(echo "$DATA" | cut -d' ' -f1 | paste -s -d ' ')
+VALUES="$TODAY "$(echo "$DATA" | cut -d' ' -f2 | paste -s -d ' ')
+
+[ ! -f "$FILE" ] && touch "$FILE" 
+! grep -q "$HEADER" "$FILE" && echo $HEADER > $FILE
+! grep -q "$TODAY" "$FILE" && echo $VALUES >> $FILE
+
+echo "$TODAY $VALUES"

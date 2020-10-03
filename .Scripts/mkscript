@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ !$1 ] 
+then
+  NAME=script
+else
+  NAME=$1
+fi
+EXTENSION='.sh'
+NAME=$NAME$EXTENSION
+
+if [[ ! -f $NAME ]]  
+then 
+  touch $NAME
+else
+  echo "file $NAME already exist"
+fi

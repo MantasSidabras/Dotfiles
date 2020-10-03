@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+
+import shutil
+import os
+import sys
+
+
+def create_dir(new_path):
+    if not os.path.exists(new_path):
+        os.mkdir(new_path)
+
+
+def sort():
+    basepath = os.curdir
+    files = list(filter(lambda filename: os.path.isfile(
+        os.path.join(basepath, filename)), os.listdir(basepath)))
+
+    for file in files:
+        file_path = os.path.join(basepath, file)
+        file_extension = ".".join(file.split('.')[1:]) or 'blank'
+        extension_path = os.path.join(basepath, file_extension)
+        create_dir(extension_path)
+        shutil.move(file_path, extension_path)
+
+
+sort()
+
+print("sorted")

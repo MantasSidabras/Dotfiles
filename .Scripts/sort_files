@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SORT_FILES_DIR="$HOME/.Scripts/Sort/sort_files"
+
+sort() {
+    if [ "$1" = "Yes" ]; then
+        $SORT_FILES_DIR
+    fi
+}
+
+DECISION=$(echo "No\nYes" | dmenu -i -p "Are you sure you want to sort $(pwd | sed 's_.*/__g')?")
+sort $DECISION

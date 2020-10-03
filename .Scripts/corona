@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+
+# pip3 install beautifullsoup4
+# pip3 install requests
+
+from bs4 import BeautifulSoup
+import requests
+
+data = requests.get('https://koronastop.lrv.lt/').text
+
+soup = BeautifulSoup(data, 'html.parser')
+
+table = soup.findAll('div', {'class': 'stats_item'})
+
+total = table[0].find('div', {'class': 'value'}).text
+cases = table[1].find('div', {'class': 'value'}).text
+recovered = table[2].find('div', {'class': 'value'}).text
+deaths = table[3].find('div', {'class': 'value'}).text
+
+active = int(total) - int(recovered)
+
+print('last_day', cases)
+print('total', total)
+print('recovered', recovered)
+print('deaths', deaths)
+print('active', active)

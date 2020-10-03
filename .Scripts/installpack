@@ -1,0 +1,15 @@
+#!/bin/bash
+
+OS=$(uname -s)
+DISTRO=$(cat /etc/os-release | grep "ID=" | cut -d "=" -f2)
+
+declare -A distros=(
+  [manjaro]="sudo pacman -S"
+  [ubuntu]="sudo apt-get install"
+  [fedora]="sudo yum install"
+  [darwin]="brew install"
+)
+
+INSTALL=${distros[$DISTRO]}
+echo $INSTALL
+$INSTALL $1

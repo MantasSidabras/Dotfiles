@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias vi="nvim"
+alias vim="nvim"
+
+alias hotkeys="nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc"
+alias zshconfig="nvim $ZDOTDIR/.zshrc"
+alias sourcezsh="source $ZDOTDIR/.zshrc"
+
+alias tmuxconfig="nvim ~/.tmux.conf"
+alias alaconfig="nvim ~/.config/alacritty/alacritty.yml"
+
+# simple
+alias ll="ls -l"
+
+# folders
+alias please='sudo $(fc -ln -1)'
+alias vimedit="nvim ~/.config/nvim/init.vim"
+alias vimconfig="cd ~/.config/nvim/pieces"
+alias vimplug="vim ~/.config/nvim/pieces/plug.vim"
+alias vimlint="vim ~/.config/nvim/pieces/plugin_ale.vim"
+alias watch="watch -n 1"
+alias size="du -sh"
+alias sizeall="sudo du -sh $(ls -a)"
+alias space='df -h | awk "NR==1 || /\s*\/\s*$/ || /\/home/"'
+alias rs="clear && printf '\e[3J'"
+alias dclean="docker system prune && docker image prune -a"
+alias ipa='curl ipinfo.io/ip'
+alias ccat='highlight --out-format=ansi --force'
+alias xclip='xclip -sel clip'
+alias gateway='ip route | head -1 | awk "{print \$3}"'
+alias timer="/usr/bin/time --format='%C took %e seconds'"
+# helpers
+alias tmuxhelp='less $HOME/.helpers/tmuxhelp'

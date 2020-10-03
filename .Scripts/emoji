@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EMOJI=$(cat ~/.Scripts/emoji-collection/emoji_list | rofi -dmenu -p "Emoji" -i | cut -d' ' -f 1)
+
+if [ ! -z "$EMOJI" ]
+then
+    notify-send "$EMOJI copied to clipboard" 
+     echo $EMOJI | tr -d '\n' | xclip -sel clip
+fi

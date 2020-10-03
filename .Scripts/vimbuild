@@ -1,0 +1,11 @@
+#!/bin/bash 
+BUILD_DIR=~/.config/nvim
+DIR=~/.config/nvim/pieces
+
+NAME=init.vim
+PLUGIN_MANAGER=$DIR/plug.vim
+PLUGINS=$(ls $DIR/plugin*)
+VIM_DEFAULTS=$(ls $DIR/vim*)
+
+cat $VIM_DEFAULTS $PLUGIN_MANAGER $PLUGINS > $BUILD_DIR/$NAME
+echo $NAME updated

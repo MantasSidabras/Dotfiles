@@ -1,0 +1,23 @@
+# add_newline = false
+
+[character]
+symbol = "π"
+error_symbol = "[π](bold red) "
+success_symbol = "[π](bold green) "
+vicmd_symbol = "[π](bold green)"
+
+[line_break]
+# disabled = true
+
+[package]
+disabled = true
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = false
+truncation_length = 5
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"

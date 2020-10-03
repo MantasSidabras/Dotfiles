@@ -1,0 +1,56 @@
+#!/bin/bash
+
+REPOSITORY=git@github.com:MantasSidabras/unix-environment-setup.git
+
+GIT_DIRS=(
+  .variables
+  .alias
+  .Scripts
+  .config/nvim
+  .config/alacritty
+  .gitconfig
+  .tmux.conf
+  .zshrc
+  .helpers
+  .oh-my-zsh
+)
+
+
+git_init() {
+  echo "initializing repo"
+  if [ -d "$HOME/.git" ]; then
+    echo "git already initialized in home directory"
+  else
+    git init $HOME
+  fi
+}
+
+git_add_list() {
+  echo "adding paths to git"
+  for gitdir in ${GIT_DIRS[@]}
+  do
+    git add -f "$HOME/$gitdir"
+    echo "$HOME/$gitdir"
+  done
+}
+
+git_save() {
+  echo "commiting and pushing to remote"
+  git commit -m "update $(date +"%Y-%m-%d")"
+  git remote add origin $REPOSITORY
+  # git pull --force --no-edit --strategy-option=ours origin master --allow-unrelated-histories
+  git push --force origin master
+}
+
+git_cleanup() {
+  echo "removing git repo"
+  rm -rf "$HOME/.git"
+}
+
+
+git_init
+git_add_list
+git_save
+git_cleanup
+
+echo "done"
