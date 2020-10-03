@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/Dotfiles/ --work-tree=$HOME'
 
 alias vi="nvim"
 alias vim="nvim"
