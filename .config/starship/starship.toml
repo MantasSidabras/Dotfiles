@@ -1,13 +1,42 @@
-# add_newline = false
+add_newline = false
+
+format = """
+$username\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$package\
+$memory_usage\
+$env_var\
+$crystal\
+$custom\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$character"""
+
+[username]
+style_user = "yellow bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
 
 [character]
 symbol = "π"
-error_symbol = "[π](bold red) "
-success_symbol = "[π](bold green) "
-vicmd_symbol = "[π](bold green)"
+error_symbol = "[π](bold red)"
+success_symbol = "[π](bold green)"
+vicmd_symbol = "[π](bold purple)"
+format = "$symbol "
 
 [line_break]
-# disabled = true
+disabled = true
 
 [package]
 disabled = true
@@ -15,9 +44,6 @@ disabled = true
 [directory]
 style = "bold cyan"
 truncate_to_repo = false
-truncation_length = 5
+truncation_length = 2
 
-[battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
+

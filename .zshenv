@@ -10,6 +10,7 @@ export STARSHIP_CACHE="$XDG_CONFIG_HOME/starship/cache"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+export VIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 

@@ -1,4 +1,5 @@
-#!/usr/bin/env zsh
+#
+#/usr/bin/env zsh
 
 fpath=($ZDOTDIR/plugins $fpath)
 
@@ -24,4 +25,4 @@ source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(starship init zsh)"
-source $ZDOTDIR/.aliases
+source $ZDOTDIR/aliases
