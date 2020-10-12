@@ -19,4 +19,5 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 PATH="$PATH:$HOME/.Scripts"
 PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.local/lib/npm-global/bin:$PATH"
 export PATH

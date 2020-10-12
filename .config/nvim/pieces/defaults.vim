@@ -17,7 +17,7 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set softtabstop=2	" Number of spaces per Tab
 
-set colorcolumn=80
+" set colorcolumn=80
 
 set cmdheight=2           " More space for displaying messages
 set cursorline            " Enable highlighting of the current line
