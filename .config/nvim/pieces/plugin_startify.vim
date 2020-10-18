@@ -10,6 +10,7 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
             \ { 'i': "$XDG_CONFIG_HOME/nvim/init.vim" },
             \ { 'z': "$ZDOTDIR/.zshrc" },
+            \ { 's': "$XDG_CONFIG_HOME/starship/starship.toml" },
             \ '~/Blog',
             \ '~/Code',
             \ ]

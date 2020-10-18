@@ -10,6 +10,7 @@ $git_state\
 $git_status\
 $hg_branch\
 $package\
+$python\
 $memory_usage\
 $env_var\
 $crystal\

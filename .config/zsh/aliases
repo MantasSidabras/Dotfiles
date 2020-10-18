@@ -39,5 +39,3 @@ alias ccat='highlight --out-format=ansi --force'
 alias xclip='xclip -sel clip'
 alias gateway='ip route | head -1 | awk "{print \$3}"'
 alias timer="/usr/bin/time --format='%C took %e seconds'"
-# helpers
-alias tmuxhelp='less $HOME/.helpers/tmuxhelp'

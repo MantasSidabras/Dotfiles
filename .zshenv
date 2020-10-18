@@ -17,7 +17,9 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
+PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/.Scripts"
+PATH="$PATH:$HOME/.helpers"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.local/lib/npm-global/bin:$PATH"
 export PATH
